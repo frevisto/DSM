@@ -1,0 +1,17 @@
+{
+  "name": "atv3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "1" : "node ./src/1.js",
+    "2": "node .src/2.js",
+    "3": "node .src/3.js",
+    "quatro": "node .src/4.js",
+    "cinco":"node .src/5.js",
+    "seis"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
