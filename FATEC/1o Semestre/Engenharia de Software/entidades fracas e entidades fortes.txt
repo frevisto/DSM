@@ -1,0 +1,18 @@
+entidades fracas e entidades fortes: entidade forte existe independentemente de outras entidades
+entidades físicas e lógicas: físicas são aquelas tangíveis, um cliente, um produto. Lógicas são aquelas que existem em decorrência da interação entre entidades físicas, a venda, uma devolução.
+
+atributos
+são características, qualitativas ou quantitativas, de uma entidade
+podem ser: simples, composto, monovalorado, multivalorado, armazenado, derivado, descritivos, nominativos e referenciais. (Aula 2, pág. 2)
+
+Chaves (Key, identifica uma entidade) são atributos:
+
+Chave primária (atributos nominativos)(primary key): atributo de valor único identificando diretamente uma entidade
+
+Chave estrangeira (atributo referencial):
+atributo que está ligado à chave primária de outra entidade 
+
+ALUNO = RA ; primária
+RA DO ALUNO MATRICULADO EM X CURSO = estrangeira, sendo a entidade principal neste caso a matrícula no curso.
+
+MER, Modelo Entidade Relacionamento

@@ -1,0 +1,40 @@
+devolver cabo ao william
+
+
+
+tomada (ac)------(anodo)  (*diodo = >| ) (catodo)  _/\_/\_/\...  diodo "ceifa metade da energia" enquanto reforça o sentido da corrente. materiais cristalinos e suas propriedades...
+
+
+capacitor se refere À capacidade de materiais eletro condutores armazenarem cargas elétricas.
+
+_/\_/\_/\_ ---| |---   o capacitor permite uma corrente contínua por oferecer a resistência no fim da corrente
+
+
+
+"BUS" = barramento		    
+
+     				       	       | MONITOR
+	   barramento de dados                /
+       ----------------------------------    /
+       |		|	       	|   /
+"c" - CPU	       RAM	         I/O------- TECLADO
+1=L    |		|		|
+0=E    ----------------------------------
+	barramento de endereços 
+
+
+Programa "driver" = ENDEREÇAR dispositivo, LER dispositivo; ENDEREÇAR memória, ESCREVER memória
+
+Representação de endereçmento na base binária : 0010101...(2)
+Existem a base hexadecimal, base dez... são BASES NUMÉRICAS
+
+Os endereçamentos estão armazenados e ordenados na MEMÓRIA em bases binárias 
+
+Um processador 4 bits lê e escreve comandos binários de quatro dígitos. Exemplo: Ler = 0 ; 0000 : Escrever = 1 ; 1111 .
+Endereçamentos são feitos também em 4 bits, etc e tal.
+
+Um BYTE são OITO BITS.
+
+
+
+ 

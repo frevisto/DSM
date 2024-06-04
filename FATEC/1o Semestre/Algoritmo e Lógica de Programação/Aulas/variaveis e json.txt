@@ -1,0 +1,43 @@
+para variaveis "infinitas" (muito utilizadas no código) = var
+
+const = declarar constantes
+
+pop e push - jscript
+
+const muito utilizado para declarar arrays, vc pode alterar o conteúdo do array, não a estrutura de dados (string...)
+
+
+JSON "JavaScript Object Notation"
+Formato que agrupa objetos e propriedades. Jsons podem ter a mesma estrutura de dados, como padronização
+
+key:value (chave e conteúdo)
+
+"-------------------------------------------------"	
+
+	const sacola = {	
+			"pincel1":"vermelho",
+			"pincel2":"azul",
+			"pincel3":"preto"
+	};
+"-------------------------------------------------"
+
+chaves são usadas para objetos e blocos. Para o objeto estão após o igual
+
+para "convocar" uma propridade, sacola.pincelx = "propriedade"
+
+	exemplo.json
+
+	{
+		"cep":"12328-070",
+		"logradouro":"av..."
+		"complemento":"..."
+		...
+	}
+
+
+const bairro = obj.bairro
+
+FAVOREÇA const{bairro} = obj
+"desestruturação" do JSON, 2ª forma cria uma cópia na variavel const
+Em uma operação na qual o objeto está à direita do sinal de igual -> let i = {a:a,b:b,c:c} (estruturação de json)
+À esquerda, desestruturar, retirar e criar uma cópia -> let{bairro} = obj

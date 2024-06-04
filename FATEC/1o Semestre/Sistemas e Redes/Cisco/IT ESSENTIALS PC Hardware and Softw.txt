@@ -1,0 +1,14 @@
+IT ESSENTIALS: PC Hardware and Software
+(notes)
+
+
+objetivos do curso:
+- reconhecimento de propriedades dos equipamentos físicos e suas funcionalidades em conjunto como máquina
+- familiarização com o ambiente laboratorial e suas ferramentas
+- manuseio e instalação do equipamento físico
+- manutenção preventiva do equipamento físico
+- instalação do OS Windows (de que forma?)
+- gerenciamento e manutenção do Sistema Operacional
+- Configuração de uma rede (!)
+
+ 

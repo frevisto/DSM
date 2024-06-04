@@ -1,0 +1,5 @@
+glossário
+
+FRAMEWORK = estratégia de trabalho
+BENCHMARKING != PESQUISA DE CONCORRÊNCIA
+BRAINSTORMING 

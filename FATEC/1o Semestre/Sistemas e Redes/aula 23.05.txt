@@ -1,0 +1,83 @@
+Mac address, endereço físico- 3 primeiros bytes para o fabricante, 
+3 para a placa. (6 bytes, 48 bits) 
+xerox pioneira no desenvolvimento de redes... ver mais
+ondas senoidais são mais propícias à transferência em 
+cabos condutores (MODEM, onda senoidal para bits), 
+primeiro uso de REPETIDORES para o recondicionamento
+dos sinais elétricos. Octetos são agrupamentos de
+oito bits. Todos são escritos na notação binária.
+
+(https://en.wikipedia.org/wiki/OSI_model)
+Conforme ISO/OSI atua apenas no primeiro nível de sinais 
+elétricos (os pulsos físicos)
+
+Existem 7 camadas(layers), ainda conforme a ISO/OSI
+
+[ponto de acesso local, pode disponibilizar a rede via wireless
+[
+
+categorias de hubs e switches(cat 5, cat 6...)
+
+ligações de cascateamento e empilhamento
+1500 bytes (padrão da internet para frames)
+colisão entre FRAMES *(QUADRO), o sistema 
+para a transmissão
+	ZONA DE COLISÃO é o HUB
+Também se aplica a terminologia de 
+	ATIVO E PASSIVO da elétrica
+Hub não se aplica a divisão de "carga".
+
+
+o EMPILHAMENTO é quando há uma porta dedicada à divisão da
+rede com mais um hub
+"senha dos equipamentos, mapeamento (PLANTA), físico e
+digital da rede
+mapa dinâmico cf circunstâncias (adicionar programa de mapeamento LINUX)
+
+NO MODELO OSI, nas camadas, a Bridge é o equipamento que 
+trabalha na 2ª camada e também faz o trabalho do repetidor.
+inteligente porque reconhece origem e destino (como uma telefonista do passado)
+
+Por fim, o Switch: agrega a Bridge, o Hub e o Repetidor;
+Tem processador, memória, i/o.
+"Segmentar a rede, computador a computador."
+Monta uma tabela e deixa na memória. Assim, livre de colisão.
+""HUB inteligente"".
+
+
+QUADRO ETHERNET (https://en.wikipedia.org/wiki/Ethernet_frame):
+(https://en.wikipedia.org/wiki/Ethernet_frame#/media/File:Ethernet_frame.svg)
+
+Observar o conceito de Inundação 
+"Cada porta do switch estabelece o domínio de colisão",
+Domínio de colisão se refere a um HUB subordinado 
+a um Switch
+
+Diversas "instâncias" de LAN
+o HUB trabalha com a inundação, todos hosts naquela LAN
+podem ver o quadro. 
+
+até aqui apenas o nível 2 (SWITCH LAYER 2)
+------------------------------------------------------------
+a partir do 3° nível (SWITCH LAYER 3) se adiciona o endereço LÓGICO
+(chamado IP address) e o QUADRO se torna um PACOTE limitados a 1500 bytes.
+
+Os IPs são compostos de (...)
+
+BROADCAST, UNICAST, MULTICAST
+_Virtual LAN (uma LAN Virtual, explicitamente)___
+Um grupo de Hosts pertencentes a um mesmo conjunto de requerimentos
+(departamentos) que se comunicam como se pertencessem a um 
+mesmo dominio de broadcasting, independentemente de onde estejam
+conectados FISICAMENTE!
+
+VLAN tem os mesmos atributos de uma LAN física
+
+MPLS PROTOCOL e outros muitos protocolos
+
+diferença entre switch 3 e roteador (?)
+
+configuração estática ou dinâmica de rotas para os pacotes
+enviados host a host. Em caso de endereçamento estático, uma 
+característica é a propagação preferencial dos pacotes (não há
+fila)
