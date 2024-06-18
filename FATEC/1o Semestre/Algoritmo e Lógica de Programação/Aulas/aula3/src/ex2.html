@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<header>
+    <meta charset="UTF-8">
+    <title>Interval</title>
+</header>
+
+<script>
+    function PLAY() {
+        document.querySelector('#num1') = parseInt('#num1');
+        document.querySelector('#num2') = parseInt('#num2');
+        if (
+            '#num1' < '#num2') {
+            '#finalnum' = '#num1'
+        } else ('#finalnum' = '#num2');
+    let time = 0
+    setInterval(function () {
+        document.querySelector('#finalnum').innerText = '#finalnum${time}';
+        let time = time++;
+    }, 1000);
+    setTimeout(() => {
+        
+    }, );
+}
+
+
+    function BREAK() {
+        setTimeout(() => {
+            
+        }, timeout);
+    }
+
+</script>
+
+
+
+<style>
+
+    body    {
+        background-color: antiquewhite;
+    }
+    h1  {
+        text-decoration: dashed ;
+        color: blue; stroke: rgba(127, 129, 12, 0.329);
+    } 
+    #cx_input   {
+        max-width: 16cm;
+        align-self: center; 
+    }
+    #finalnum   {
+        max-width:8cm; text-align: center;
+        color:rgb(80, 77, 38);
+        border: 0.025in; 
+        border-color: rgba(109, 84, 84, 0.87);
+        border-style: solid;
+        display:flex; align-content: center;
+    }
+    #STOP   {
+        color: rgb(255, 255, 255); background-color: brown;
+        align-content: center; margin-left: 4cm;
+    }
+    #PLAY   {
+        margin-left: 4cm;
+    }
+
+</style>
+
+
+
+
+
+
+
+
+<body>
+    <h1>Exercício ...</h1>
+    <div id="cx_input">
+        <input type="number" id="num1"></input>
+        <input type="number" id="num2"></input>
+            <p id="PLAY">
+                <input type="submit"
+                onclick="PLAY">
+            </p>
+        </input>
+    </div>
+
+
+    <div>
+        <h1 id='finalnum'>
+            0
+        </h1>
+    </div>
+
+    <button id="STOP" type="button"
+     onclick="BREAK()">
+        STOP
+    </button>
+
+
+</body>
