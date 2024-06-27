@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Countdown</title>
+  <link rel="icon" href="./ico.png" type="image/x-icon" />
+  <style>
+    body {
+      background-color: antiquewhite;
+      text-align: center;
+    }
+
+    h1 {
+      margin: auto;
+      color: red;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
+
+    #div_input {
+      margin: auto;
+      max-width: auto;
+      padding: 0.4em;
+    }
+
+    #div_vis {
+      max-width: 9cm;
+      max-height: 2cm;
+      padding: 0.4em;
+      margin: auto;
+      border: 0.02in;
+      border-style: solid;
+      border-color: rgba(109, 84, 84, 0.87);
+      background-color: rgba(97, 109, 84, 0.425);
+    }
+
+    #num_vis {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: larger;
+      color: rgb(68, 45, 16);
+    }
+
+    #div_stop {
+      margin: auto;
+      padding: 1.2em;
+    }
+
+    #break {
+      color: rgb(255, 255, 255);
+      background-color: brown;
+      margin: auto;
+    }
+
+    .explosion {
+      width: 100px;
+      height: 100px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+      animation: explode 1s ease-out forwards;
+    }
+
+    @keyframes explode {
+      0% {
+        transform: scale(0);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(10);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>THE COUNTDOWN</h1>
+  </header>
+
+  <div id="div_input">
+    <input type="number" id="leftId" />
+    <input type="number" id="rightId" />
+    <p>
+      <button id="playButton" onclick="play()">PLAY</button>
+    </p>
+  </div>
+
+  <div id="div_vis">
+    <p id="num_vis">Hello, world!</p>
+  </div>
+
+  <div id="div_stop">
+    <button id="break" type="button" onclick="stop()">STOP</button>
+  </div>
+
+  <script>
+    var countdown;
+
+    function createExplosion() {
+      var tgt_Element = document.getElementById('div_stop');
+      var tgt_Rect = tgt_Element.getBoundingClientRect();
+
+      var explosionDiv = document.createElement("div");
+      explosionDiv.className = "explosion";
+
+      // Center the explosion div relative to the tgt_Element
+      explosionDiv.style.top = (window.scrollY + tgt_Rect.top + tgt_Rect.height / 2 - 50) + "px";
+      explosionDiv.style.left = (window.scrollX + tgt_Rect.left + tgt_Rect.width / 2 - 50) + "px";
+
+      document.body.appendChild(explosionDiv);
+
+      explosionDiv.addEventListener("animationend", function () {
+        explosionDiv.parentNode.removeChild(explosionDiv);
+      });
+    }
+
+    function play() {
+      var num_vis = document.getElementById("num_vis");
+      var num1Elem = document.getElementById("leftId");
+      var num2Elem = document.getElementById("rightId");
+
+      var num1Value = parseInt(num1Elem.value);
+      var num2Value = parseInt(num2Elem.value);
+
+      if (isNaN(num1Value) || isNaN(num2Value) || num1Elem.value === "" || num2Elem.value === "") {
+        alert("Please enter valid numbers");
+        return;
+      }
+
+      if (num1Value < num2Value) {
+        num_vis.innerText = num2Value;
+        var num_setoff = num1Value;
+      } else {
+        num_vis.innerText = num1Value;
+        var num_setoff = num2Value;
+      }
+
+      countdown = setInterval(function () {
+        if (parseInt(num_vis.innerText) === num_setoff) {
+          clearInterval(countdown);
+          createExplosion();
+        } else {
+          num_vis.innerText = parseInt(num_vis.innerText) - 1;
+        }
+      }, 15);
+    }
+
+    function stop() {
+      clearInterval(countdown);
+      document.getElementById("num_vis").innerText = "OOF, close one.";
+    }
+  </script>
+</body>
+</html>

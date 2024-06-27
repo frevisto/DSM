@@ -1,5 +1,21 @@
 glossário
 
-FRAMEWORK = estratégia de trabalho
-BENCHMARKING != PESQUISA DE CONCORRÊNCIA
-BRAINSTORMING 
+Framework (noun, neutral):
+    Estrutura  de trabalho. Um framework oferece uma estrutura sobre a qual o projeto poderá
+    ser desenvolvido. Nela, estão inclusas boas práticas e componentes atualizados (ver Library).
+    Exemplos de Framework são:
+        Frontend Frameworks: React.js, Angular, Vue.js
+        Backend Frameworks: Django (Python), Ruby on Rails (Ruby), Express.js (Node.js)
+        Full-Stack Frameworks: Laravel (PHP), Spring (Java)
+
+Benchmarking (noun/verb):
+    Técnica de análise comparativa para empresas do mesmo setor (concorrentes).
+    Em suma, a técnica tem como objetivo posicionar empresas em termos de qualidade,
+    eficácia e eficiência (ver Peter Drucker), e geralmente inclui análise de métricas.
+    (Similar: Pesquisa de Concorrência)
+
+Pesquisa de Concorrência (expresão composta, fem.):
+    Difere da anterior por buscar inteligência da(s) empresa(s) concorrentes para auxiliar
+    a tomada de decisão. Importante observar se atos configuram Concorrência Desleal.
+
+Brainstorming (noun/verb):
