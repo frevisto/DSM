@@ -1,13 +1,26 @@
 {
   "name": "aula-1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "um": "npx ts-node ./src/um",
+    "dois":"npx ts-node ./src/dois",
+    "tres":"npx ts-node ./src/tres",
+    "quatro":"npx ts-node ./src/quatro",
+    "cinco":"npx ts-node ./src/cinco",
+    "seis":"npx ts-node ./src/seis",
+    "sete":"npx ts-node ./src/sete",
+    "oito":"npx ts-node ./src/oito",
+    "nove":"npx ts-node ./src/nove",
+    "dez":"npx ts-node ./src/dez"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
 }

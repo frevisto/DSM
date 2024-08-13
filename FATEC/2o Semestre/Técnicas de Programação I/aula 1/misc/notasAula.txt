@@ -1,0 +1,10 @@
+npx -node ""
+
+herança, polimorfismo
+
+
+classes e métodos possuem escopos.
+
+
+console.log(1 > 2 && 2 > 1?"Um":"Dois");
+//if de linha (operação lógica ? res1:res2 ou outra operação lógica:res3 ou outra operação lógica, e assim por diante...)
