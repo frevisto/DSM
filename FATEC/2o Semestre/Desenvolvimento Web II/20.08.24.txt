@@ -1,0 +1,28 @@
+20.08.24
+
+dois componentes irmãos não se comunicam, é impossível/ o que existe é o componente função (pai da árvore) interage com os filhos; Essa comunicação se dá por propriedades da marcação.
+
+forms(
+	{nome:"", setNome(),
+	 idade:"", setIdade()
+			...}
+);
+
+seria o equivalente a 
+
+<Form nome={nome} setNome={setNome} idade={idade} setIdade={setIdade} .../>
+<Result nome={nome} idade={idade}/>
+
+
+você pode definir uma classe de objeto, suas propriedades e invocá-lo, nesse caso acima para o input do usuário
+
+
+interface Props {
+	nome: string;
+	idade: string;
+	}
+
+a comunicação entre componentes se dá na hierarquia, exceto quando os componentes estão no mesmo "contexto", um "bloco" definido
+
+
+toda função que acessa hardware é assíncrona
