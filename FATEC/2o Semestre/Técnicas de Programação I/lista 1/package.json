@@ -1,0 +1,24 @@
+{
+  "name": "lista-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "um":"ts-node ./src/um",
+    "dois":"ts-node ./src/dois",
+    "tres":"ts-node ./src/tres",
+    "quatro":"ts-node ./src/quatro",
+    "cinco":"ts-node ./src/cinco",
+    "seis":"ts-node ./src/seis",
+    "sete":"ts-node ./src/sete",
+    "oito":"ts-node ./src/oito",
+    "nove":"ts-node ./src/nove"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
