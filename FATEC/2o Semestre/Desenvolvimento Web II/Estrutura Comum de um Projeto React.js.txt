@@ -1,0 +1,118 @@
+/src __________________________(0)
+│
+├──/assets ___________________(1)
+│   ├── /images
+│   ├── /styles
+│   └── /fonts
+│
+├──/components _______________(2)
+│   ├── /common
+│   ├── /layout
+│   └── /specificComponent
+│
+├──/hooks ____________________(3)
+│
+├──/pages ____________________(4)
+│   ├── /Home
+│   ├── /About
+│   └── /Contact
+│
+├──/services _________________(5)
+│   ├── api.js
+│   └── auth.js
+│
+├── /context _________________(6)
+│   └── AuthContext.js
+│
+├── /utils ___________________(7)
+│   └── helpers.js
+│
+├── /types ___________________(8)
+│   └── index.d.ts
+│
+├── App.js
+├── index.js
+└── reportWebVitals.js
+
+
+
+
+	LEGENDAS
+
+
+
+	(1) /assets: Contém recursos estáticos como imagens, estilos (CSS/SASS), fontes, e outros arquivos que não são componentes de React mas são usados no projeto.
+	(1.1) /images: Imagens usadas no projeto.
+	(1.2) /styles: Arquivos de estilos globais, como CSS ou SASS.
+	(1.3) /fonts: Arquivos de fontes personalizadas.
+
+
+
+
+
+
+	(2) /components: Contém todos os componentes reutilizáveis do projeto. É subdividido em subpastas para melhor organização.
+	(2.1) /common: Componentes genéricos reutilizáveis em várias partes do projeto (ex.: botões, inputs, modais).
+	(2.2) /layout: Componentes relacionados ao layout, como cabeçalhos, rodapés, barras laterais.
+	(2.3) /specificComponent: Componentes específicos que são usados em lugares particulares.
+
+
+
+
+
+
+	(3) /hooks: Contém hooks personalizados que encapsulam lógica de estado ou efeitos reutilizáveis entre componentes.
+
+
+
+
+
+
+	(4) /pages: Cada pasta dentro de /pages corresponde a uma página da aplicação. Cada página pode ter seus próprios componentes internos, estilos e lógica.
+	(4.1) Home, About, Contact: Exemplos de páginas que têm seus próprios componentes e lógica específica.
+
+
+
+
+
+	(5) /services: Contém arquivos que lidam com a comunicação com APIs, autenticação, e outras operações de negócios que são independentes de qualquer componente específico.
+	(5.1) api.js: Pode conter a configuração para chamadas de API, como axios.
+	(5.2) auth.js: Lida com autenticação de usuários.
+
+
+
+
+
+	(6) /context: Armazena arquivos relacionados ao contexto do React, usados para gerenciar estado global em toda a aplicação.
+	(6.1) AuthContext.js: Exemplo de um arquivo que pode conter o contexto de autenticação.
+
+
+
+
+
+	(7) /utils: Contém funções utilitárias e helpers que são usadas em várias partes da aplicação.
+	(7.1) helpers.js: Pode conter funções genéricas de manipulação de dados ou formatação.
+
+
+
+
+
+	(8) /types: Usada em projetos TypeScript para armazenar definições de tipos e interfaces.
+	(8.1) index.d.ts: Pode conter declarações globais de tipos e interfaces.
+
+
+
+
+
+	(0.1) App.js: Componente raiz que define a estrutura principal da aplicação.
+
+	(0.2) index.js: Ponto de entrada da aplicação. Geralmente é onde o componente App é renderizado dentro do DOM.
+
+	(0.3) reportWebVitals.js: Arquivo opcional usado para medir e reportar métricas de desempenho (gerado automaticamente pelo Create React App).
+
+
+
+
+https://legacy.reactjs.org/docs/hooks-intro.html
+
+https://react.dev/reference/react/hooks

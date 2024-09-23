@@ -1,0 +1,23 @@
+conjunto de partida e conjunto de chegada. 
+
+no produto entre conjuntos a ordem importa
+
+múltiplas relações são tuplas ou ênuplas
+
+cardinalidade, neste aspecto, se traduz em "tamanho", cálculo de possibilidades entre relações. dita: conjunto A x conjunto B
+
+A = {4,8,10,5}		Depois do Tal que, a função proposicional pode ser entendida como propriedades da relação.
+B = {4,7,9}		Forma mais fácil para a resolução: testar as condições da função proposicional.
+R = {(x,y) | x E A /\ y E B /\ x>y }; => R = {(8,4),(8,7),(10,4),(10,7),(10,9),(5,4)};
+
+R = {(x,y) | x E A /\ y E B /\ y = x + 2 }
+A x B = ? Todas os dados do conjunto de partida combinados o conjunto de chegada;
+
+R = {(x,y) E R² | y = x² };      A potência de um eletrodoméstico é P = i²R (potência, corrente e resistência);
+R = {(1,1),(2,4); Relação entre pares;
+
+Domínio, Contradomínio e Imagem. 
+A={1,2,3} B={3,4}
+R={(1,3),(1,4),(... 
+
+Dominio "está no primeiro e aparece em par"

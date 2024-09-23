@@ -1,0 +1,26 @@
+init 
+
+tipo associado à função é o que ela retorna
+
+passagem de valor por cópia e referência.
+
+por valor, a passagem se dá por uma cópia na memória, "x" e "x cópia" na memória", a qual ocupa espaço (32 bits), se referenciado, dobra o espaço (64 bits).
+o que não acontece com a referência, observado no array, no qual se refere ao apontador na memória ram.
+
+
+escopo do let é o bloco
+
+escopo do var é geral/global
+
+var é carregada antes do let. Levantamento de Variável. Carrgeada Globalmente.
+escopo do var é um diretório (sim, mas?)
+
+let é carregado em ordem de processamento.  ↓  →  "(desvio)"
+
+design pattern. View e Model, 
+
+
+---- INTERVALO
+
+
+

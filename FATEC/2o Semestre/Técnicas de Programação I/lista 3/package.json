@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@types/node": "^22.5.0",
+    "node": "^22.7.0",
+    "typescript": "^5.5.4"
+  },
+  "name": "lista-4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

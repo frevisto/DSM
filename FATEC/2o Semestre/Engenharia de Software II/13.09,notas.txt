@@ -1,0 +1,21 @@
+Engenharia de Software 2, Profº Me. André Olimpio, 13/09/24 
+---------------------------------------------------------------------
+o Trello segue a lógica do KanBan
+	Três Etapas Básicas:
+	1- READY
+	2- DOING
+	3- DONE
+
+
+to do ---> corresponde ao product backlog, requisitos funcionais
+
+doing ---> (Srint n - Título do Requisito) Responsável(**required)
+
+done ---> (Sprint n - Título do Requisito) Responsável(**required)
+_____________________________________________________________________
+
+// Sugestão que DONE seja particionado por sprints.
+.....
+P.O. define o status done do requisito.
+Scrum Master classifica e delega as atividades.
+

@@ -1,0 +1,15 @@
+assíncrono, ou não sequencial
+
+existir ou não o elemento e não importar a ordem
+
+set {1,2,3} = set {3,2,1}
+
+para conjuntos não há repetiçoes
+
+
+um tipo genérico de conjunto:
+let s_gen: Set<any>= new Set();
+
+
+
+concurso fgv inpe 2023 tg16 

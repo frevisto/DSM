@@ -1,0 +1,93 @@
+CREATE TABLE User_Default (
+  Id SERIAL NOT NULL,
+  Email CHAR(256) NOT NULL UNIQUE,
+  Pass VARCHAR(12) NOT NULL,
+  Nome TEXT NULL,
+  Data_Nasc DATE NULL,
+  PRIMARY KEY(Id)
+);
+
+CREATE DOMAIN Genero_Domain AS TEXT CHECK (VALUE IN ('Masculino', 'Feminino', 'Prefiro Não Informar'));
+CREATE DOMAIN Obj_Peso_Domain AS TEXT CHECK (VALUE IN ('Manter Peso', 'Ganhar Peso', 'Perder Peso'));
+
+CREATE TABLE User_Dados (
+  User_Default_Id INTEGER NOT NULL,
+  Altura NUMERIC(3) NULL,
+  Peso NUMERIC(5,2) NULL,
+  Genero Genero_Domain NULL,
+  Obj_Peso Obj_Peso_Domain NULL,
+  Data_Entrada TIMESTAMP NOT NULL,
+  FOREIGN KEY (User_Default_Id) REFERENCES User_Default(Id)
+);
+
+
+CREATE TABLE Produtos (
+  Id SERIAL NOT NULL,
+  User_Default_Id INTEGER NULL,
+  Nome TEXT NULL,
+  Descricao TEXT NULL,
+  Tamanho_Porcao FLOAT NULL,
+  Unidade_Tamanho_Porcao TEXT NULL,
+  Quantidade_Por_Porcao FLOAT NULL,
+  Unidade_Quantidade_Por_Porcao TEXT NULL,
+  Calorias FLOAT NULL,
+  Proteina FLOAT NULL,
+  Carboidrato FLOAT NULL,
+  Acucares FLOAT NULL,
+  Fibras FLOAT NULL,
+  Gordura_Total FLOAT NULL,
+  Gordura_Saturada FLOAT NULL,
+  Gordura_Trans FLOAT NULL,
+  Calcio FLOAT NULL,
+  Sodio FLOAT NULL,
+  PRIMARY KEY(Id),
+  FOREIGN KEY (User_Default_Id) REFERENCES User_Default(Id)
+);
+
+CREATE TABLE Taco_Alimentos (
+  Id SERIAL NOT NULL,
+  Nome TEXT NULL,
+  Descricao TEXT NULL,
+  Tamanho_Porcao FLOAT NULL,
+  Unidade_Tamanho_Porcao TEXT NULL,
+  Quantidade_Por_Porcao FLOAT NULL,
+  Unidade_Quantidade_Por_Porcao TEXT NULL,
+  Calorias FLOAT NULL,
+  Proteina FLOAT NULL,
+  Carboidrato FLOAT NULL,
+  Acucares FLOAT NULL,
+  Fibras FLOAT NULL,
+  Gordura_Total FLOAT NULL,
+  Gordura_Saturada FLOAT NULL,
+  Gordura_Trans FLOAT NULL,
+  Calcio FLOAT NULL,
+  Sodio FLOAT NULL,
+  PRIMARY KEY(Id)
+);
+
+CREATE TABLE Usr_Consome_Produtos (
+  User_Default_Id INTEGER NOT NULL,
+  Produtos_Id INTEGER NOT NULL,
+  Data_Consumo TIMESTAMP NULL,
+  Quantidade_Consumida FLOAT NULL,
+  FOREIGN KEY (User_Default_Id) REFERENCES User_Default(Id),
+  FOREIGN KEY (Produtos_Id) REFERENCES Produtos(Id)
+);
+
+CREATE TABLE Usr_Consome_Taco (
+  Taco_Alimentos_Id INTEGER NOT NULL,
+  User_Default_Id INTEGER NOT NULL,
+  Data_Consumo TIMESTAMP NULL,
+  Quantidade_Consumida FLOAT NULL,
+  FOREIGN KEY (User_Default_Id) REFERENCES User_Default(Id),
+  FOREIGN KEY (Taco_Alimentos_Id) REFERENCES Taco_Alimentos(Id)
+);
+
+CREATE DOMAIN Tipo_Alimento_Domain AS TEXT CHECK (VALUE IN ('TACO','PROD');
+
+CREATE TABLE User_Has_Favoritos (
+	User_Default_Id INTEGER NOT NULL,
+	Tipo_Alimento Tipo_Alimento_Domain NOT NULL,
+	Alimento_Id INTEGER,
+	FOREIGN KEY User_Default_Id REFERENCES User_Default(Id)
+);
