@@ -1,0 +1,51 @@
+Aulas notas
+
+SOBRESCRIÇÃO DE ATRIBUTOS E MÉTODOS (PROPRIEDADES?) EM CLASSES
+
+Class Pessoa{
+	cpf:number;
+	nome:string;
+	dataNasc:string;
+	saldo:number;
+	
+	constructor(a:number,b:string,c:string){
+		this.cpf = a;
+		this.nome = b;
+		this.dataNasc = c;
+		this.saldo = 0
+	};
+};
+
+Class Cliente extends Pessoa {
+	constructor(a:number){
+		super(cpf:number,nome:string,dataNasc:string)
+		this.saldo = a;
+		};
+};
+
+
+SOBREPOSIÇÃO E SOBRECARGA (sinonimos)
+No meu entendimento, é uma espécie de "espelhamento" de métodos.
+Um método que recebe um tipo de variável pode ser "SOBRECARREGADO"
+
+
+class Teste {
+	somar(a: number, b: number): number;
+	somar(a: string, b: string, c: string): string;
+	somar(a: string, b: string): string;
+------> somar(a: any, b: any, c?: any): any {
+		if (c !== undefined) {
+			return a + b + c;
+		} else {
+			return a + b;
+		};
+	};
+};
+
+
+A linha destacada nunca é atingida. As opções estão nas linhas anteriores.
+
+
+POLIMORFISMO
+
+Sobrescrita de método herdado da classe mãe. "Comportamento Polimórfico"

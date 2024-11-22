@@ -1,0 +1,25 @@
+variável constante, termo... 
+expressão algébrica  x²
+equação  x² = 4
+
+sufixo nomio se associa aos termos
+binomio, trinomio... polinomios
+polinomios são caracterizados pelos expoentes inteiros nas expressões.
+equações que apresentam 
+uma expressão transcendental são aquelas que não são expressadas com sinais algébricos + - / * raiz ; 
+x = seno(z) : Se utilizados sinais algébricos, "vc cai" em uma série infinita;
+
+exprimir uma equação matemática em typescript,
+e o contrário.
+
+raiz quadrada de x = x elevado a meio
+raiz cúbica de x elevado a 5 = ?
+raiz quintupla de x elevado a 3 = x elevado a 3/5 ;
+
+funções são modelos para a "realidade";
+então "modelos lineares, modelos quadráticos, modelos cúbicos"
+
+
+regressão: regressão linear
+
+assintota = Assíntota é um termo com origem num vocábulo grego que faz referência a algo que não tem coincidência. O conceito é usado no âmbito da geometria para designar uma reta que, se se prolongar de forma indefinida, tende a aproximar-se a uma certa curva ou função, embora sem alcançar a achá-la.

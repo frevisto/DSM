@@ -1,0 +1,23 @@
+Seno:
+
+    sin⁡(θ) = cateto oposto/hipotenusa
+;
+
+Cosseno:
+
+    cos⁡(θ)=cateto adjacente / hipotenusa
+;
+
+Tangente:
+
+    tan⁡(θ)=cateto oposto / cateto adjacente
+;
+_____________________________________________
+
+Tangente:
+
+
+    tan(θ)=d/h ;​
+
+
+    d = h / tan(θ) ;

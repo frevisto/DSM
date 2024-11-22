@@ -1,7 +1,0 @@
-questão 4 , p1, Est. Dados, 09/09/24
-
-Os algoritmos não são 100% equivalentes porque as entradas, no caso do iterativo, se valores negativos, será um loop infinito (caso índice=0).
-No recursivo, será um estouro de pilha.
-
-
-Para um algoritmo recursivo, se um dos casos base nunca forem atingidos, o resultado sempre será Estouro de Pilha.

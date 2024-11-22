@@ -1,0 +1,70 @@
+só existe o index.html dentro do públic. o index.tsx do src faz a ligação entre o mundo tsx e o html
+
+<Tagname prop="valor"/>
+
+prop é recebido na assinatura da função que a renderiza. function App(props*:Props**){ return ...};
+
+*primeiro props é a lista dos argumentos **a tipagem dos argumentos um por um
+(assim, é utilizado como o "transporte" das variáveis)
+
+não tem como o pai chamar uma função do filho
+o "pai" é aquele que chama
+
+
+CASTING
+... = useState<string>();
+
+Passando para o filho o dado do pai via props
+
+<A set={}>
+
+interface Props{
+	set:(value:string)=>void;
+	}
+	
+o filho é uma função, ela compartilha com o pai n variáveis e métodos que precisam ser declarados (interface Props local)
+
+a propriedade intrínseca do HTML5 onClick pede uma função. Então se costuma utilizar a notação de função anônima:
+<button onClick={()=>props.set()}> Conteúdo do botão </button>
+DENTRO DO COMPONENTE FILHO /\
+
+
+CONTEXTO: tem que informar o contexto e o provedor.
+1 ------------------------------------
+import { createContext } from "react";
+
+const Ctx = createContext(
+    {
+        ... : ... ;
+    }
+);
+2 ------------------------------------
+import { createContext } from "react";
+import { CtxProps } from "../types";
+
+export const Ctx = createContext(
+    {
+        
+    } as CtxProps
+);
+Contexto: const Ctx ; Provedor: CtxProps ;
+
+3------------------------------------
+export function OrigemProvider({children}:any){
+
+}
+//Essa função sempre tem que retornar no value aquilo que tem dentro do CtxProps
+
+//Então
+export function OrigemProvider({children}:any){
+    const [origem,setOrigem] = useState("B");
+
+    return (
+        <Ctx.Provider value={{origem, set:setOrigem}}>
+            {children}
+        </Ctx.Provider>
+    );
+}
+
+Com o contexto, não é mais necessário que os componentes recebam métodos e atributos pelas propriedades diretamente.
+

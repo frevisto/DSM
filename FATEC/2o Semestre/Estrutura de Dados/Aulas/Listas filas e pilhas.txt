@@ -1,0 +1,13 @@
+Listas filas e pilhas,
+estruturas que são alocadas na memória de forma dinamica
+
+declaração da variável = alocação na memória
+4 bytes?
+
+estruturas lineares e sequenciais
+
+Em listas, a alocação em si, os endereços em memória, não segue uma ordem lógica
+
+Definição de ponteiro, alocação de memória
+
+criação dinamica de elementos em memória e acesso sequencial

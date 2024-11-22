@@ -1,0 +1,11 @@
+parenteses = mecanismo de processamento de expressão. Abre parenteses, empilha. Fecha parenteses, desempilha.
+O apontador entra na jogada, quando empilha o apontador 
+
+melhor aplicação de reordenamento de array: empilha e desempilha
+
+
+operações com filas e pilhas:  restrição de acesso
+
+operação com fila priorizada, ou ordenada pela prioridade (prioridade dos processos (um número): um dado a mais, além do dado e o nó).
+
+
