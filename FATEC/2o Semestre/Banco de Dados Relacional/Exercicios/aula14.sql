@@ -6,6 +6,7 @@ create table tbl_departamentos(
     cod_departamento serial primary key,
     nome text not null,
     data_inicio date,
+    qtde_projetos int DEFAULT 0,
     cod_cidade int references tbl_cidades(cod_cidade)
 );
 create table tbl_projetos(
@@ -21,6 +22,11 @@ create table tbl_empregados (
     sexo char,
     salario real,
     cod_departamento int references tbl_departamentos(cod_departamento)
+);
+create table tbl_dependentes (
+    cod_dependente serial primary key,
+    nome text,
+    cod_empregado int references tbl_empregados(cod_empregado)
 );
 INSERT INTO tbl_cidades (nome)
 VALUES ('New York'),
@@ -71,43 +77,43 @@ VALUES ('New York'),
     ('New Orleans'),
     ('Cleveland'),
     ('Honolulu');
-INSERT INTO tbl_departamentos (nome, data_inicio, cod_cidade)
-VALUES ('Departamento 1', '2023-01-01', 1),
-    ('Departamento 2', '2023-02-15', 2),
-    ('Departamento 3', '2023-03-10', 3),
-    ('Departamento 4', '2023-04-20', 4),
-    ('Departamento 5', '2023-05-05', 4),
-    ('Departamento 6', '2023-06-30', 4),
-    ('Departamento 7', '2023-07-12', 4),
-    ('Departamento 8', '2023-08-22', 5),
-    ('Departamento 9', '2023-09-18', 5),
-    ('Departamento 10', '2023-10-05', 10),
-    ('Departamento 11', '2023-11-11', 10),
-    ('Departamento 12', '2023-12-25', 10),
-    ('Departamento 13', '2024-01-03', 10),
-    ('Departamento 14', '2024-02-14', 10),
-    ('Departamento 15', '2024-03-21', 10),
-    ('Departamento 16', '2024-04-02', 10),
-    ('Departamento 17', '2024-05-17', 10),
-    ('Departamento 18', '2024-06-28', 18),
-    ('Departamento 19', '2024-07-30', 18),
-    ('Departamento 20', '2024-08-08', 28),
-    ('Departamento 21', '2024-09-10', 21),
-    ('Departamento 22', '2024-10-12', 21),
-    ('Departamento 23', '2024-11-20', 21),
-    ('Departamento 24', '2024-12-24', 21),
-    ('Departamento 25', '2025-01-07', 21),
-    ('Departamento 26', '2025-02-19', 21),
-    ('Departamento 27', '2025-03-25', 24),
-    ('Departamento 28', '2025-04-30', 24),
-    ('Departamento 29', '2025-05-02', 24),
-    ('Departamento 30', '2025-06-15', 30),
-    ('Departamento 31', '2025-07-22', 31),
-    ('Departamento 32', '2025-08-11', 32),
-    ('Departamento 33', '2025-09-09', 30),
-    ('Departamento 34', '2025-10-28', 30),
-    ('Departamento 35', '2025-11-15', 30),
-    ('Departamento 36', '2025-12-10', 30);
+INSERT INTO tbl_departamentos (nome, data_inicio, cod_cidade, qtde_projetos)
+VALUES ('Departamento 1', '2023-01-01', 1, 2),
+    ('Departamento 2', '2023-02-15', 2, 2),
+    ('Departamento 3', '2023-03-10', 3, 0),
+    ('Departamento 4', '2023-04-20', 4, 3),
+    ('Departamento 5', '2023-05-05', 4, 0),
+    ('Departamento 6', '2023-06-30', 4, 2),
+    ('Departamento 7', '2023-07-12', 4, 0),
+    ('Departamento 8', '2023-08-22', 5, 0),
+    ('Departamento 9', '2023-09-18', 5, 0),
+    ('Departamento 10', '2023-10-05', 10, 1),
+    ('Departamento 11', '2023-11-11', 10, 0),
+    ('Departamento 12', '2023-12-25', 10, 0),
+    ('Departamento 13', '2024-01-03', 10, 0),
+    ('Departamento 14', '2024-02-14', 10, 0),
+    ('Departamento 15', '2024-03-21', 10, 0),
+    ('Departamento 16', '2024-04-02', 10, 0),
+    ('Departamento 17', '2024-05-17', 10, 0),
+    ('Departamento 18', '2024-06-28', 18, 0),
+    ('Departamento 19', '2024-07-30', 18, 0),
+    ('Departamento 20', '2024-08-08', 28, 0),
+    ('Departamento 21', '2024-09-10', 21, 0),
+    ('Departamento 22', '2024-10-12', 21, 0),
+    ('Departamento 23', '2024-11-20', 21, 0),
+    ('Departamento 24', '2024-12-24', 21, 0),
+    ('Departamento 25', '2025-01-07', 21, 0),
+    ('Departamento 26', '2025-02-19', 21, 0),
+    ('Departamento 27', '2025-03-25', 24, 0),
+    ('Departamento 28', '2025-04-30', 24, 0),
+    ('Departamento 29', '2025-05-02', 24, 0),
+    ('Departamento 30', '2025-06-15', 30, 0),
+    ('Departamento 31', '2025-07-22', 31, 0),
+    ('Departamento 32', '2025-08-11', 32, 0),
+    ('Departamento 33', '2025-09-09', 30, 0),
+    ('Departamento 34', '2025-10-28', 30, 0),
+    ('Departamento 35', '2025-11-15', 30, 0),
+    ('Departamento 36', '2025-12-10', 30, 0);
 INSERT INTO tbl_projetos (nome, cod_departamento)
 VALUES ('Projeto A', 1),
     ('Projeto B', 2),
@@ -286,7 +292,7 @@ VALUES (
         '1987-03-06',
         'Rua da Serra, 1357, Palmas, TO',
         'M',
-        5700.00,
+        5710.00,
         19
     ),
     (
@@ -457,60 +463,16 @@ VALUES (
         5600.00,
         36
     );
+INSERT INTO tbl_dependentes (nome, cod_empregado)
+VALUES('Joao', 1),
+('Pedro', 1),
+('Maria', 2),
+('Paulo', 7);
 -- exercicios
---1 crie uma view chamada v_depcidade que liste o nome de cada departamento com o nome da cidade onde este departamento está localizado.
-create or replace view v_depcidade as select d.nome as nome_departamento, c.nome as nome_cidade from tbl_departamentos d join tbl_cidades c on c.cod_cidade = d.cod_cidade;
---Após a criacao executar Select * from v_depcidade; retorna 36 linhas
-ok. select definition from pg_views where viewname = 'v_depcidade';
-
---2 crie uma view denominada v_depcidadehouston, a partir de v_depcidade que mostre somente os departamentos localizados em Houston
-create or replace view v_depcidade as
- SELECT d.nome AS nome_departamento,
-    c.nome AS nome_cidade
-   FROM (tbl_departamentos d
-     JOIN tbl_cidades c ON ((c.cod_cidade = d.cod_cidade)) and c.nome ilike 'houston');
-     
--- execute select * from v_depcidadehouston
-ok.
-
---3 Crie uma visão denominada de v_opsalario, a qual lista a soma e média de todos os salários dos empregados.
-create or replace view v_opsalario as
-select avg(salario) from tbl_empregados;
-
--- execute select * from v_opsalario
-ok.
-
---4 Criar a view vw_empregados_salarial que exibe o nome e o salário de todos os empregados com salário acima de 5500.
-create or replace view vw_empregados_salarial as
-select nome, salario from tbl_empregados where salario > 5500; 
-
--- execute select * from v_empregados_salarial
-ok
-
---5 criar uma view v_departemp para listar os departamentos e a quantidade de empregados em cada um
-create or replace view v_departemp as
-select d.nome, count(e.cod_departamento) as quantidade from tbl_departamentos d join tbl_empregados e on d.cod_departamento = e.cod_departamento group by d.nome order by quantidade desc;
-
--- listar os departamentos e as quantidades por orderm decrescente de quantidade.
-ok.
-
---6 criar uma view v_departrouble para listar os nomes dos departamentos que possuem mais projetos do que empregados.
-SELECT 
-    d.nome AS nome_departamento
-FROM 
-    tbl_departamentos d
-LEFT JOIN 
-    (SELECT cod_departamento, COUNT(*) AS total_empregados 
-     FROM tbl_empregados 
-     GROUP BY cod_departamento) e
-ON 
-    d.cod_departamento = e.cod_departamento
-LEFT JOIN 
-    (SELECT cod_departamento, COUNT(*) AS total_projetos 
-     FROM tbl_projetos 
-     GROUP BY cod_departamento) p
-ON 
-    d.cod_departamento = p.cod_departamento
-WHERE 
-    COALESCE(p.total_projetos, 0) > COALESCE(e.total_empregados, 0);
-
+--1 crie uma trigger que atualiza a quantidade de projetos da tbl_departamentos caso um projeto for deletado
+--2 crie uma trigger que atualiza a quantidade de projetos da tbl_departamentos caso um novo projeto for adicionado
+--3 a) Crie uma tabela chamada tbl_empregado_historico_salario com as colunas cod_empregado e salario e data
+--  b) crie uma trigger que salva o salario atual de um empregado toda vez que seu salario for atualizado
+-- dica: use a funcao now() para salvar a data
+--4 a) crie uma coluna chamada data_atualizacao na tbl_empregados do tipo TIMESTAMP
+-- b) crie uma trigger que toda vez que os dados do empregado forem atualizados, que essa data tambem seja atualizada.

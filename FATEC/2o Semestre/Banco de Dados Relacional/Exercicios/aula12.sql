@@ -108,6 +108,7 @@ VALUES ('Departamento 1', '2023-01-01', 1),
     ('Departamento 34', '2025-10-28', 30),
     ('Departamento 35', '2025-11-15', 30),
     ('Departamento 36', '2025-12-10', 30);
+
 INSERT INTO tbl_projetos (nome, cod_departamento)
 VALUES ('Projeto A', 1),
     ('Projeto B', 2),
@@ -129,6 +130,7 @@ VALUES ('Projeto A', 1),
     ('Projeto R', 14),
     ('Projeto S', 14),
     ('Projeto T', 24);
+    
 INSERT INTO tbl_empregados (
         nome,
         data_nascimento,
@@ -286,7 +288,7 @@ VALUES (
         '1987-03-06',
         'Rua da Serra, 1357, Palmas, TO',
         'M',
-        5700.00,
+        5710.00,
         19
     ),
     (
@@ -458,59 +460,9 @@ VALUES (
         36
     );
 -- exercicios
---1 crie uma view chamada v_depcidade que liste o nome de cada departamento com o nome da cidade onde este departamento está localizado.
-create or replace view v_depcidade as select d.nome as nome_departamento, c.nome as nome_cidade from tbl_departamentos d join tbl_cidades c on c.cod_cidade = d.cod_cidade;
---Após a criacao executar Select * from v_depcidade; retorna 36 linhas
-ok. select definition from pg_views where viewname = 'v_depcidade';
-
---2 crie uma view denominada v_depcidadehouston, a partir de v_depcidade que mostre somente os departamentos localizados em Houston
-create or replace view v_depcidade as
- SELECT d.nome AS nome_departamento,
-    c.nome AS nome_cidade
-   FROM (tbl_departamentos d
-     JOIN tbl_cidades c ON ((c.cod_cidade = d.cod_cidade)) and c.nome ilike 'houston');
-     
--- execute select * from v_depcidadehouston
-ok.
-
---3 Crie uma visão denominada de v_opsalario, a qual lista a soma e média de todos os salários dos empregados.
-create or replace view v_opsalario as
-select avg(salario) from tbl_empregados;
-
--- execute select * from v_opsalario
-ok.
-
---4 Criar a view vw_empregados_salarial que exibe o nome e o salário de todos os empregados com salário acima de 5500.
-create or replace view vw_empregados_salarial as
-select nome, salario from tbl_empregados where salario > 5500; 
-
--- execute select * from v_empregados_salarial
-ok
-
---5 criar uma view v_departemp para listar os departamentos e a quantidade de empregados em cada um
-create or replace view v_departemp as
-select d.nome, count(e.cod_departamento) as quantidade from tbl_departamentos d join tbl_empregados e on d.cod_departamento = e.cod_departamento group by d.nome order by quantidade desc;
-
--- listar os departamentos e as quantidades por orderm decrescente de quantidade.
-ok.
-
---6 criar uma view v_departrouble para listar os nomes dos departamentos que possuem mais projetos do que empregados.
-SELECT 
-    d.nome AS nome_departamento
-FROM 
-    tbl_departamentos d
-LEFT JOIN 
-    (SELECT cod_departamento, COUNT(*) AS total_empregados 
-     FROM tbl_empregados 
-     GROUP BY cod_departamento) e
-ON 
-    d.cod_departamento = e.cod_departamento
-LEFT JOIN 
-    (SELECT cod_departamento, COUNT(*) AS total_projetos 
-     FROM tbl_projetos 
-     GROUP BY cod_departamento) p
-ON 
-    d.cod_departamento = p.cod_departamento
-WHERE 
-    COALESCE(p.total_projetos, 0) > COALESCE(e.total_empregados, 0);
-
+--1 Crie uma funcao denominada fc_soma que recebe dois valores inteiros e retorna o valor resultante da soma de ambos
+--2 Crie uma funcao denominada fc_maior_salario, que sem usar função agregada MAX, retorne o nome do empregado com o maior salario.
+--3 crie a funcao fc_media_salario que retorna a media dos salarios dos empregados
+--4 Crie a funcao fc_salarios que recebe o código do empregado como parâmetro e retorne o salário, o salário acrescido de 10% e o salário reduzido em 15%.
+--5 Crie uma funcao denominada fc_projetos que liste o código e o nome de todos os projetos cadastrados.
+--6 Crie a funcao fc_proj_departmento que recebe o codigo do departamento e mostra quantos projetos o departamento possui
