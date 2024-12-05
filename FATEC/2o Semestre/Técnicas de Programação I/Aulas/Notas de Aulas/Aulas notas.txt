@@ -49,3 +49,12 @@ A linha destacada nunca é atingida. As opções estão nas linhas anteriores.
 POLIMORFISMO
 
 Sobrescrita de método herdado da classe mãe. "Comportamento Polimórfico"
+
+
+
+class mega {
+	a,
+	b,
+	c
+}
+técnica de instanciamento> mega.forEach(sorteio => {
