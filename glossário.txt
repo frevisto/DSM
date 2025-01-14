@@ -19,3 +19,10 @@ Pesquisa de Concorrência (expresão composta, fem.):
     a tomada de decisão. Importante observar se atos configuram Concorrência Desleal.
 
 Brainstorming (noun/verb):
+
+
+Proof of Concept, POC (expressão composta):
+
+Data Access Object, DAO (expressão composta):
+
+Decentralized Autonomous Organization, DAO (expressão composta):
