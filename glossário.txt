@@ -26,3 +26,7 @@ Proof of Concept, POC (expressão composta):
 Data Access Object, DAO (expressão composta):
 
 Decentralized Autonomous Organization, DAO (expressão composta):
+
+
+ping em porta: nc -zv <IP ou domínio> <porta>
+
