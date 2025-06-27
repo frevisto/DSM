@@ -1,0 +1,38 @@
+SQL
+
+CREATE TABLE dados_meteorologicos (
+    id SERIAL PRIMARY KEY,
+    cidade VARCHAR(100),
+    temperatura FLOAT
+);
+
+INSERT INTO dados_meteorologicos (cidade, temperatura) 
+VALUES ('Jacareí', 32);
+
+
+UPDATE dados_meteorologicos 
+SET temperatura = 31 
+WHERE id = 1;
+
+DELETE FROM dados_meteorologicos WHERE id = 1;
+
+--------------------------------------------------
+
+NoSQL (MongoDB)
+
+> use dados_meteorologicos
+
+> db.dados_meteorologicos.insertOne({
+    cidade: "Jacareí",
+    temperatura: 32
+});
+
+> db.dados_meteorologicos.updateOne(
+    { cidade: "Jacareí" }, 
+    { $set: { temperatura: 31 } }
+);
+
+> db.dados_meteorologicos.deleteOne({ cidade: "Jacareí" });
+
+---------------
+FIM DO DOCUMENTO

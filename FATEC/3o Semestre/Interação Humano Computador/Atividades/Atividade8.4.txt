@@ -1,0 +1,31 @@
+1- Definir UI, objetivos e citar os principais pontos (aspectos) que devem estar presentes no UI.
+R: UI Design é a disciplina que se concentra na criação da aparência visual e da interação de um produto digital. Seu objetivo é criar uma interface visual atraente e fácil de usar, que permite que os usuários interajam de forma eficiente e eficaz com o produto e garantir que a interface seja coesa, intuitiva, e fácil de usar.
+
+2- Definir UX e citar as fases do processo de design UX e explanar cada uma delas.
+R: UX é a disciplina que se concentra em criar experiências de usuário satisfatórias e significativas em produtos digitais. Seu objetivo é garantir que o produto digital atenda às necessidades dos usuários de forma eficiente, eficaz e agradável. As fases do processo podem ser a realização de pesquisas com usuários para entender suas necessidades, a criação de protótipos e testes de usabilidade e colaboração com outros profissionais de design.
+
+3.- Defina acessibilidade e como impacta no design de UI/UX.
+R: Acessibilidade é tornar interfaces compreensíveis e funcionais para todas as pessoas, inclusive com limitações físicas ou cognitivas. No design UI/UX, isso melhora a navegação, amplia o alcance do produto e promove uma experiência mais inclusiva.
+
+4.- Defina "usabilidade" no UX.
+R: No UX, usabilidade garante uma experiência fluida, intuitiva e sem frustrações, aumentando o engajamento e a satisfação. É a facilidade com que o usuário interage com um produto para atingir seus objetivos de forma prática e eficiente.
+
+5.- Defina "design centrado no usuário" e cite a diferença com outras abordagens de design.
+R: No UX, design centrado no usuário foca nas necessidades, comportamentos e expectativas reais das pessoas durante todo o processo de criação. Diferente de abordagens que priorizam estética ou tecnologia, essa prática busca soluções úteis, usáveis e relevantes para quem vai de fato usar o produto.
+
+6.- Defina "testes de usabilidade" e como estão presentes no processo de UX.
+R: Testes de usabilidade são métodos para observar como usuários reais interagem com um produto e identificar dificuldades ou melhorias. No processo de UX, eles validam decisões de design, ajudam a refinar a experiência e garantem que o produto funcione bem na prática.
+
+7.- Tipos de Imagens que podem ser utilizadas no UI/UX
+R: No UI/UX, imagens ajudam a comunicar, guiar e engajar o usuário de forma visual e rápida. Podem ser utilizadas fotos, ilustrações, ícones, gráficos, vetores, animações e imagens de fundo — cada uma com função específica na experiência e estética do produto.
+
+8.- Importância de UI/UX no Desenvolvimento de Produtos.
+R: UI/UX é essencial no desenvolvimento de produtos porque garante que eles sejam funcionais, fáceis de usar e agradáveis para o usuário. Uma boa experiência aumenta a satisfação, reduz erros, melhora a retenção e diferencia o produto no mercado.
+
+9.- Citar os benefícios de um bom UI/UX
+R: Um bom UI/UX melhora a usabilidade, aumenta a satisfação do usuário e reduz a taxa de abandono. Também fortalece a imagem da marca, otimiza resultados e diminui custos com suporte e retrabalho.
+
+10.- Cite as principais ferramentas utilizadas para criar protótipos de UI/UX.
+R: Figma, Sketch, Adobe XD, InVision, Axure, Balsamiq, Usertesting, Google Analytics, Hotjar e Trello.
+
+

@@ -1,0 +1,22 @@
+
+> use pedidos
+
+> db.pedidos.insertMany([
+    { cliente: "Carlos", produto: "Notebook", valor: 3500, status: "Pago" },
+    { cliente: "Ana", produto: "Smartphone", valor: 2500, status: "Pendente" },
+    { cliente: "João", produto: "Tablet", valor: 1200, status: "Pago" },
+    { cliente: "Maria", produto: "Fone de Ouvido", valor: 300, status: "Cancelado" }
+]);
+
+> db.pedidos.find({ cliente: "Ana" });
+> db.pedidos.find({ valor: { $gte: 2000 } });
+
+> db.pedidos.updateOne(
+    { cliente: "Ana" },
+    { $set: { status: "Pago" } }
+);
+
+> db.pedidos.deleteOne({ cliente: "João" });
+
+---------------
+FIM DO DOCUMENTO

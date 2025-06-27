@@ -1,0 +1,6 @@
+find . -name "node_modules" -type d
+find . -name "node_modules" -type d -exec rm -rf {} +
+
+upower -i $(upower -e | grep BAT) - status de bateria em notes
+
+ping em porta: nc -zv <IP ou domínio> <porta>

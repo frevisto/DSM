@@ -1,0 +1,10 @@
+{
+  "name": "revisao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "index": "ts-node ./src/index"
+  }
+}
+  

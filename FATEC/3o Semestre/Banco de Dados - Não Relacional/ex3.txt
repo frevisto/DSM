@@ -1,0 +1,55 @@
+> use estacoes_meteorologicas
+
+1 > db.estacoes_meteorologicas.insertMany([
+    { nome: "Estação Norte", sensores: ["temperatura", "umidade"], localizado: "zona urbana" },
+    { nome: "Estação Sul", sensores: ["temperatura"], localizado: "zona rural" },
+    { nome: "Estação Leste", sensores: ["vento", "umidade", "pressão"], localizado: "montanha" },
+    { nome: "Estação Oeste", sensores: [], localizado: "deserto" },
+    { nome: "Estação Central", sensores: ["temperatura", "pressão"], localizado: "cidade" }
+]);
+
+
+2 > db.estacoes_meteorologicas.updateMany(
+    {},
+    { $set: { manutencao: "pendente" } }
+);
+
+
+3 > db.estacoes_meteorologicas.updateOne(
+    { nome: "Estação Sul" },
+    { $set: { sensores: ["temperatura", "vento", "pressão"] } }
+);
+
+
+4 > db.estacoes_meteorologicas.updateOne(
+    { nome: "Estação Norte" },
+    { $pull: { sensores: "vento" } }
+);
+
+5 > db.estacoes_metereologicas.deleteMany(
+	{"sensores":{$exists: false} }
+);
+
+6 > db.estacoes_meteorologicas.deleteMany(
+    { $or: [ 
+        { sensores: { $size: 1 } }, 
+        { sensores: { $size: 2 } } 
+    ] }
+);
+
+7 > db.estacoes_meteorologicas.find(
+    { sensores: "temperatura" }
+);
+
+8 > db.estacoes_meteorologicas.find(
+    { $and: [ { sensores: "temperatura" }, { sensores: "pressão" } ] }
+);
+
+9 > db.estacoes_meteorologicas.find(
+    { "localizacao": {$type:"string"} }
+);
+
+10 > db.estacoes_meteorologicas.find().skip(2).limit(4);
+
+---------------
+FIM DO DOCUMENTO

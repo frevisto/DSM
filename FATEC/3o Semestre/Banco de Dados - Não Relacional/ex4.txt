@@ -1,0 +1,18 @@
+1 > db.estacoes_meteorologicas.find(
+    { localizacao: "São Paulo" }
+);
+
+2 > db.estacoes_meteorologicas.find(
+    { sensores: "temperatura" }
+).count();
+
+3 > db.estacoes_meteorologicas.find().limit(5);
+
+4 > db.estacoes_meteorologicas.createIndex({ sensores: 1 });
+
+5 > db.estacoes_meteorologicas.find({ sensores: "temperatura" }).count();
+  > db.estacoes_meteorologicas.find({ sensores: "pressão" }).count();
+  > db.estacoes_meteorologicas.find({ sensores: "umidade" }).count();
+
+---------------
+FIM DO DOCUMENTO
